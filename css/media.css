@@ -1,0 +1,72 @@
+@media (min-width: 768px) {
+    .image-slider {
+        max-height: 200px;
+        transition: max-height .5s ease;
+    }
+
+    .image-slider .expanded {
+        max-height: 1000px;
+    }
+
+    .slider-one .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(224px, 1fr));
+        padding: 24px 0;
+        gap: 16px 24px;
+    }
+
+    .slider-pagination::before {
+        display: none;
+    }
+
+    .brands-btn {
+        display: flex;
+        align-items: center;
+        color: #1B1C21;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+        outline: none;
+        transition: outline .1s ease-in-out, transform .2s ease-in-out, color .1s ease-in-out;
+    }
+
+    .brands-btn:focus-visible {
+        border-radius: 3px;
+        outline: 1px solid rgb(255, 62, 121);
+    }
+
+    .brands-btn:active {
+        color: rgb(239, 50, 50);
+    }
+}
+
+@media (min-width: 1120px) {
+    .container {
+        width: 1076px;
+    }
+
+    .image-slider {
+        max-height: 200px;
+        transition: max-height .5s ease;
+    }
+
+    .image-slider .expanded {
+        max-height: 1000px;
+    }
+
+    .slider-one .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(240px, 1fr));
+        gap: 16px 32px;
+    }
+}
+
+@media (any-pointer: fine) and (any-hover: hover) {
+    .image-slider__btn:hover svg {
+        transform: scale(1.2);
+    }
+
+    .brands-btn:hover {
+        transform: scale(1.2);
+    }
+}
